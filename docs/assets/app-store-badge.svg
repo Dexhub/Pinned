@@ -1,0 +1,15 @@
+<svg width="200" height="59" viewBox="0 0 200 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="59" rx="10" fill="#000000"/>
+  
+  <!-- App Store text -->
+  <text x="50" y="15" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF">Download on the</text>
+  <text x="50" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">App Store</text>
+  
+  <!-- Apple logo -->
+  <path d="M28 15C27.2 14.2 25.8 13.5 24.3 13.6C24.1 15.3 24.9 17.1 25.7 18.1C26.5 19.2 28 19.8 29.2 19.7C29.4 17.9 28.8 16 28 15Z" fill="#FFFFFF"/>
+  <path d="M29.2 19.8C27.5 19.7 26 20.8 25.1 20.8C24.2 20.8 22.9 19.8 21.5 19.8C19.7 19.9 18 20.9 17 22.6C15.1 26 16.5 31.2 18.3 34.1C19.2 35.5 20.2 37 21.5 37C22.8 37 23.3 36.1 24.9 36.1C26.5 36.1 26.9 37 28.3 37C29.7 37 30.6 35.7 31.4 34.3C32.4 32.7 32.8 31.1 32.8 31C32.8 31 30.4 30 30.4 27.2C30.4 24.9 32.4 23.8 32.5 23.7C31.4 22 29.7 21.8 29.2 21.8V19.8Z" fill="#FFFFFF"/>
+  
+  <!-- Border -->
+  <rect x="0.5" y="0.5" width="199" height="58" rx="9.5" stroke="#A6A6A6"/>
+</svg>

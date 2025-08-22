@@ -1,0 +1,28 @@
+# Netlify/GitHub Pages redirects for Pinned website
+
+# App Store redirect
+/app-store https://apps.apple.com/app/pinned 302
+/ios https://apps.apple.com/app/pinned 302
+/download https://apps.apple.com/app/pinned 302
+
+# Social media redirects
+/twitter https://twitter.com/pinnedapp 302
+/instagram https://instagram.com/pinnedapp 302
+/github https://github.com/aethon-labs/pinned 302
+
+# Support redirects
+/support mailto:support@pinned.app 302
+/help mailto:support@pinned.app 302
+/feedback mailto:feedback@pinned.app 302
+/contact mailto:hello@pinned.app 302
+
+# Legal redirects
+/terms /terms.html 301
+/privacy-policy /privacy.html 301
+
+# API redirects (for future use)
+/api/* https://api.pinned.app/:splat 301
+
+# Old URL redirects (for future migrations)
+/home / 301
+/about / 301

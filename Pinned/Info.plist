@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Pinned</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+	</dict>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	
+	<!-- CRITICAL PRIVACY DESCRIPTIONS FOR APP STORE APPROVAL -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Pinned uses your location to suggest nearby travel destinations and enhance your travel tracking experience with location-based insights.</string>
+	
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Pinned uses your location to automatically track your travel patterns and provide personalized destination recommendations.</string>
+	
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Pinned needs access to your photos to let you attach travel memories to your destinations and create beautiful travel cards to share.</string>
+	
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Pinned saves your travel photos and shareable travel cards to your photo library so you can keep and share your memories.</string>
+	
+	<key>NSCameraUsageDescription</key>
+	<string>Pinned uses your camera to capture travel moments and attach photos to your travel records for a complete memory experience.</string>
+	
+	<key>NSContactsUsageDescription</key>
+	<string>Pinned can access your contacts to help you find friends who also use the app and share your travel experiences with them.</string>
+	
+	<!-- APP TRANSPORT SECURITY -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<!-- Add any specific domains you need here -->
+		</dict>
+	</dict>
+	
+	<!-- BACKGROUND MODES (if needed for location tracking) -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>background-processing</string>
+		<string>location</string>
+	</array>
+	
+	<!-- SUPPORTED FILE TYPES -->
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Travel Data</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.aethon.pinned.traveldata</string>
+			</array>
+		</dict>
+	</array>
+	
+	<!-- URL SCHEMES FOR DEEP LINKING -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.aethon.pinned</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>pinned</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

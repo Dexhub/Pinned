@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinned - Track Your Travel Adventures</title>
+    <meta name="description" content="Discover your travel personality and track your adventures with Pinned. The iOS app that turns your journeys into beautiful stories with analytics, photos, and personality-driven insights.">
+    <meta name="keywords" content="travel app, iOS, travel tracker, vacation planner, travel analytics, travel personality, world map">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pinnedapp.github.io/">
+    <meta property="og:title" content="Pinned - Track Your Travel Adventures">
+    <meta property="og:description" content="Discover your travel personality and track your adventures with beautiful analytics and insights.">
+    <meta property="og:image" content="https://pinnedapp.github.io/assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pinnedapp.github.io/">
+    <meta property="twitter:title" content="Pinned - Track Your Travel Adventures">
+    <meta property="twitter:description" content="Discover your travel personality and track your adventures with beautiful analytics and insights.">
+    <meta property="twitter:image" content="https://pinnedapp.github.io/assets/twitter-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Analytics -->
+    <script defer data-domain="pinnedapp.github.io" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/logo.svg" alt="Pinned Logo" class="logo">
+                <span class="brand-name">Pinned</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#personality" class="nav-link">Personality</a>
+                <a href="#privacy" class="nav-link">Privacy</a>
+                <a href="#download" class="nav-link cta-button">Download</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Your Travel Story,
+                        <span class="gradient-text">Beautifully Tracked</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Discover your travel personality, track your adventures, and turn your journeys into beautiful stories with analytics, photos, and insights that matter.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#download" class="btn btn-primary">
+                            <img src="assets/app-store-badge.svg" alt="Download on App Store" class="app-store-badge">
+                        </a>
+                        <a href="#features" class="btn btn-secondary">
+                            <span>See Features</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4.16663 10H15.8333M15.8333 10L9.99996 4.16667M15.8333 10L9.99996 15.8333" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">195</span>
+                            <span class="stat-label">Countries to Explore</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Memories to Create</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Travel Personality</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="phone-mockup">
+                        <img src="assets/hero-phone.svg" alt="Pinned App Screenshot" class="phone-screen">
+                        <div class="floating-elements">
+                            <div class="floating-card card-1">
+                                <div class="card-emoji">🗺️</div>
+                                <div class="card-text">Interactive Maps</div>
+                            </div>
+                            <div class="floating-card card-2">
+                                <div class="card-emoji">📊</div>
+                                <div class="card-text">Rich Analytics</div>
+                            </div>
+                            <div class="floating-card card-3">
+                                <div class="card-emoji">🎭</div>
+                                <div class="card-text">Travel Personality</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="globe-animation"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Everything You Need to Track Your Adventures</h2>
+                <p class="section-subtitle">From capturing memories to understanding your travel patterns, Pinned has you covered.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4C14.06 4 6 12.06 6 22C6 32.5 24 44 24 44S42 32.5 42 22C42 12.06 33.94 4 24 4ZM24 28C20.69 28 18 25.31 18 22C18 18.69 20.69 16 24 16C27.31 16 30 18.69 30 22C30 25.31 27.31 28 24 28Z" fill="url(#gradient1)"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Interactive World Map</h3>
+                    <p class="feature-description">Scratch off countries as you visit them and visualize your travel progress on a beautiful, interactive world map.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M38 8H10C8.9 8 8 8.9 8 10V38C8 39.1 8.9 40 10 40H38C39.1 40 40 39.1 40 38V10C40 8.9 39.1 8 38 8ZM28 34H12V32L20 24L24 28L36 16V34H28Z" fill="url(#gradient2)"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Photo Memories</h3>
+                    <p class="feature-description">Capture and organize your travel photos with smart albums that automatically organize by destination and date.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M40 6H32L30 4H18L16 6H8C5.8 6 4 7.8 4 10V36C4 38.2 5.8 40 8 40H40C42.2 40 44 38.2 44 36V10C44 7.8 42.2 6 40 6ZM24 34C18.48 34 14 29.52 14 24C14 18.48 18.48 14 24 14C29.52 14 34 18.48 34 24C34 29.52 29.52 34 24 34Z" fill="url(#gradient3)"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Rich Analytics</h3>
+                    <p class="feature-description">Get detailed insights about your travel patterns, spending habits, and favorite destinations with beautiful charts and statistics.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 2C19.04 2 15 6.04 15 11C15 16.5 24 28 24 28S33 16.5 33 11C33 6.04 28.96 2 24 2ZM24 14.5C22.62 14.5 21.5 13.38 21.5 12C21.5 10.62 22.62 9.5 24 9.5C25.38 9.5 26.5 10.62 26.5 12C26.5 13.38 25.38 14.5 24 14.5Z" fill="url(#gradient4)"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Travel Personality</h3>
+                    <p class="feature-description">Discover your unique travel archetype through our fun personality quiz and get personalized recommendations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4C13 4 4 13 4 24S13 44 24 44 44 35 44 24 35 4 24 4ZM22 34H18V18H22V34ZM30 34H26V26H30V34ZM30 22H26V18H30V22Z" fill="url(#gradient5)"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Privacy First</h3>
+                    <p class="feature-description">Your travel data stays on your device. We believe your adventures are personal and should remain private.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M36 16.5C36 25 24 36 24 36S12 25 12 16.5C12 10.5 17 6 24 6S36 10.5 36 16.5Z" fill="url(#gradient6)"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Offline Ready</h3>
+                    <p class="feature-description">Access your travel data anywhere, even without internet. Perfect for those off-the-grid adventures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personality Section -->
+    <section id="personality" class="personality">
+        <div class="container">
+            <div class="personality-content">
+                <div class="personality-text">
+                    <h2 class="section-title">What's Your Travel Personality?</h2>
+                    <p class="section-subtitle">
+                        Take our fun quiz to discover your travel archetype and get personalized insights about your wanderlust style.
+                    </p>
+                    
+                    <div class="personality-types">
+                        <div class="personality-type">
+                            <span class="type-emoji">🏃‍♂️</span>
+                            <div class="type-info">
+                                <h4>Adventure Seeker</h4>
+                                <p>Always looking for the next thrill</p>
+                            </div>
+                        </div>
+                        <div class="personality-type">
+                            <span class="type-emoji">🏛️</span>
+                            <div class="type-info">
+                                <h4>Culture Vulture</h4>
+                                <p>Museums and history are your jam</p>
+                            </div>
+                        </div>
+                        <div class="personality-type">
+                            <span class="type-emoji">🏖️</span>
+                            <div class="type-info">
+                                <h4>Beach Bum</h4>
+                                <p>Sun, sand, and relaxation mode</p>
+                            </div>
+                        </div>
+                        <div class="personality-type">
+                            <span class="type-emoji">🍜</span>
+                            <div class="type-info">
+                                <h4>Foodie Explorer</h4>
+                                <p>Travel through your taste buds</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#download" class="btn btn-primary">Discover Your Type</a>
+                </div>
+                
+                <div class="personality-visual">
+                    <div class="quiz-mockup">
+                        <div style="width: 300px; height: 600px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto; color: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+                            <div style="font-size: 64px; margin-bottom: 30px;">🎭</div>
+                            <div style="font-size: 28px; font-weight: bold; margin-bottom: 15px; text-align: center;">Travel Quiz</div>
+                            <div style="font-size: 16px; text-align: center; padding: 0 30px; opacity: 0.9;">Discover your unique travel personality</div>
+                            <div style="margin-top: 40px; padding: 12px 24px; background: rgba(255,255,255,0.2); border-radius: 25px; font-size: 14px;">Take the Quiz →</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title">Beautiful Design, Powerful Features</h2>
+            <p class="section-subtitle">Every screen is crafted with care to make tracking your travels a joy.</p>
+            
+            <div class="screenshots-carousel">
+                <div class="screenshot-item active">
+                    <div style="width: 300px; height: 600px; background: linear-gradient(135deg, #E8F4FD 0%, #BFDBFE 100%); border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto;">
+                        <div style="font-size: 48px; margin-bottom: 20px;">🗺️</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #1F2937; margin-bottom: 10px;">World Map</div>
+                        <div style="font-size: 16px; color: #6B7280; text-align: center; padding: 0 20px;">Interactive travel tracking</div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h3>Interactive World Map</h3>
+                        <p>See your progress across the globe</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div style="width: 300px; height: 600px; background: linear-gradient(135deg, #FFF7ED 0%, #FED7AA 100%); border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto;">
+                        <div style="font-size: 48px; margin-bottom: 20px;">📊</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #1F2937; margin-bottom: 10px;">Analytics</div>
+                        <div style="font-size: 16px; color: #6B7280; text-align: center; padding: 0 20px;">Beautiful travel insights</div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h3>Rich Travel Analytics</h3>
+                        <p>Understand your travel patterns</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div style="width: 300px; height: 600px; background: linear-gradient(135deg, #F0FDF4 0%, #BBF7D0 100%); border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto;">
+                        <div style="font-size: 48px; margin-bottom: 20px;">✍️</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #1F2937; margin-bottom: 10px;">Add Record</div>
+                        <div style="font-size: 16px; color: #6B7280; text-align: center; padding: 0 20px;">Log your adventures</div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h3>Easy Trip Logging</h3>
+                        <p>Add destinations with photos and notes</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div style="width: 300px; height: 600px; background: linear-gradient(135deg, #FDF2F8 0%, #FBBF24 100%); border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto;">
+                        <div style="font-size: 48px; margin-bottom: 20px;">👤</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #1F2937; margin-bottom: 10px;">Profile</div>
+                        <div style="font-size: 16px; color: #6B7280; text-align: center; padding: 0 20px;">Your travel DNA</div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h3>Personal Travel Profile</h3>
+                        <p>Your travel DNA in one place</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="section-title">Ready to Start Your Journey?</h2>
+                <p class="section-subtitle">Join thousands of travelers who are already tracking their adventures with Pinned.</p>
+                
+                <div class="download-buttons">
+                    <a href="https://apps.apple.com/app/pinned" class="download-button ios">
+                        <img src="assets/app-store-badge.svg" alt="Download on App Store">
+                    </a>
+                    <div class="coming-soon android">
+                        <img src="assets/google-play-badge.svg" alt="Coming Soon to Google Play">
+                        <span class="badge">Coming Soon</span>
+                    </div>
+                </div>
+                
+                <div class="download-info">
+                    <div class="info-item">
+                        <span class="info-icon">📱</span>
+                        <span>iOS 15.0 or later</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">💾</span>
+                        <span>Works offline</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🔒</span>
+                        <span>Privacy focused</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🆓</span>
+                        <span>Free to download</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="Pinned Logo" class="footer-logo">
+                    <span class="footer-brand-name">Pinned</span>
+                    <p class="footer-tagline">Track your adventures, discover your travel personality</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#personality">Personality Quiz</a>
+                        <a href="#download">Download</a>
+                        <a href="changelog.html">What's New</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="mailto:support@pinned.app">Help Center</a>
+                        <a href="mailto:feedback@pinned.app">Send Feedback</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="mailto:support@pinned.app">Contact Us</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="security.html">Security</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="https://twitter.com/pinnedapp" target="_blank">Twitter</a>
+                        <a href="https://instagram.com/pinnedapp" target="_blank">Instagram</a>
+                        <a href="https://github.com/aethon-labs/pinned" target="_blank">GitHub</a>
+                        <a href="mailto:hello@pinned.app">Email</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aethon Labs. All rights reserved. Made with ❤️ for travelers worldwide.</p>
+                <div class="footer-social">
+                    <a href="https://twitter.com/pinnedapp" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/pinnedapp" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SVG Gradients -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF0080;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#0080FF;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#4ECDC4;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#A8E6CF;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#88D8A3;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#6C5CE7;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#A29BFE;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="gradient6" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FD79A8;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FDCB6E;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

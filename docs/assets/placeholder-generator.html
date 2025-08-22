@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placeholder Image Generator for Pinned</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-container { margin: 20px 0; }
+        canvas { border: 1px solid #ccc; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Pinned App Placeholder Images</h1>
+    <p>This page generates placeholder images for the Pinned website. Right-click to save each image.</p>
+    
+    <div class="image-container">
+        <h3>Hero Phone Mockup (600x1200)</h3>
+        <canvas id="hero-phone" width="600" height="1200"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <h3>Screenshot 1 - World Map (375x812)</h3>
+        <canvas id="screenshot-1" width="375" height="812"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <h3>Screenshot 2 - Analytics (375x812)</h3>
+        <canvas id="screenshot-2" width="375" height="812"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <h3>Screenshot 3 - Add Record (375x812)</h3>
+        <canvas id="screenshot-3" width="375" height="812"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <h3>Screenshot 4 - Profile (375x812)</h3>
+        <canvas id="screenshot-4" width="375" height="812"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <h3>Personality Quiz (375x812)</h3>
+        <canvas id="personality-quiz" width="375" height="812"></canvas>
+    </div>
+
+    <script>
+        // Generate placeholder images
+        function createPlaceholder(canvasId, title, subtitle, color) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, color);
+            gradient.addColorStop(1, '#FFFFFF');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Phone frame (if hero)
+            if (canvasId === 'hero-phone') {
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 8;
+                ctx.roundRect(20, 20, canvas.width - 40, canvas.height - 40, 40);
+                ctx.stroke();
+                
+                // Screen area
+                ctx.fillStyle = '#000';
+                ctx.roundRect(40, 80, canvas.width - 80, canvas.height - 160, 20);
+                ctx.fill();
+                
+                // Mock interface
+                ctx.fillStyle = '#FF0080';
+                ctx.fillRect(60, 100, canvas.width - 120, 60);
+                
+                ctx.fillStyle = '#0080FF';
+                ctx.fillRect(60, 180, (canvas.width - 120) * 0.6, 40);
+                
+                ctx.fillStyle = '#FFD93D';
+                ctx.fillRect(60, 240, (canvas.width - 120) * 0.8, 40);
+            } else {
+                // Regular app screenshots
+                ctx.fillStyle = '#000';
+                ctx.roundRect(0, 0, canvas.width, 40, 20);
+                ctx.fill();
+                
+                // Status bar
+                ctx.fillStyle = '#FFF';
+                ctx.font = '14px Arial';
+                ctx.fillText('9:41', 20, 25);
+                ctx.fillText('100%', canvas.width - 50, 25);
+                
+                // App content based on type
+                if (canvasId === 'screenshot-1') {
+                    // World map mockup
+                    ctx.fillStyle = '#E8F4FD';
+                    ctx.fillRect(0, 60, canvas.width, canvas.height - 160);
+                    
+                    // Mock countries
+                    ctx.fillStyle = '#FF0080';
+                    ctx.fillRect(50, 200, 80, 60);
+                    ctx.fillStyle = '#0080FF';
+                    ctx.fillRect(200, 150, 100, 80);
+                    ctx.fillStyle = '#FFD93D';
+                    ctx.fillRect(150, 350, 90, 70);
+                } else if (canvasId === 'screenshot-2') {
+                    // Analytics mockup
+                    ctx.fillStyle = '#FF0080';
+                    ctx.fillRect(20, 100, canvas.width - 40, 100);
+                    
+                    ctx.fillStyle = '#0080FF';
+                    ctx.fillRect(20, 220, canvas.width - 40, 80);
+                    
+                    // Mock chart
+                    ctx.strokeStyle = '#FFD93D';
+                    ctx.lineWidth = 3;
+                    ctx.beginPath();
+                    ctx.moveTo(20, 400);
+                    ctx.lineTo(100, 350);
+                    ctx.lineTo(180, 320);
+                    ctx.lineTo(260, 380);
+                    ctx.lineTo(340, 300);
+                    ctx.stroke();
+                }
+            }
+            
+            // Title text
+            ctx.fillStyle = canvasId === 'hero-phone' ? '#333' : '#333';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(title, canvas.width / 2, canvas.height / 2);
+            
+            // Subtitle
+            if (subtitle) {
+                ctx.font = '16px Arial';
+                ctx.fillStyle = '#666';
+                ctx.fillText(subtitle, canvas.width / 2, canvas.height / 2 + 40);
+            }
+            
+            // Pinned logo
+            ctx.font = 'bold 20px Arial';
+            ctx.fillStyle = '#FF0080';
+            ctx.fillText('📍 Pinned', canvas.width / 2, canvas.height - 50);
+        }
+        
+        // Create all placeholders
+        createPlaceholder('hero-phone', 'Pinned App', 'Track Your Adventures', '#F8FAFC');
+        createPlaceholder('screenshot-1', 'World Map', 'Interactive Travel Map', '#E8F4FD');
+        createPlaceholder('screenshot-2', 'Analytics', 'Travel Statistics', '#FFF7ED');
+        createPlaceholder('screenshot-3', 'Add Record', 'Log Your Trips', '#F0FDF4');
+        createPlaceholder('screenshot-4', 'Profile', 'Your Travel DNA', '#FDF2F8');
+        createPlaceholder('personality-quiz', 'Travel Quiz', 'Discover Your Type', '#EEF2FF');
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Placeholder Images</title>
+    <style>
+        canvas { display: block; margin: 10px auto; border: 1px solid #ccc; }
+        button { padding: 10px 20px; margin: 5px; font-size: 16px; }
+        .container { text-align: center; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pinned App Placeholder Generator</h1>
+        <p>Click buttons to generate and download placeholder images for your website:</p>
+        
+        <button onclick="generateAndDownload('screenshot-1', 375, 812, '#E8F4FD', 'World Map', 'Interactive travel map with visited countries')">Screenshot 1 - World Map</button>
+        <button onclick="generateAndDownload('screenshot-2', 375, 812, '#FFF7ED', 'Analytics', 'Beautiful travel statistics and insights')">Screenshot 2 - Analytics</button>
+        <button onclick="generateAndDownload('screenshot-3', 375, 812, '#F0FDF4', 'Add Record', 'Simple form to log your travels')">Screenshot 3 - Add Record</button>
+        <button onclick="generateAndDownload('screenshot-4', 375, 812, '#FDF2F8', 'Profile', 'Your personal travel DNA')">Screenshot 4 - Profile</button>
+        <button onclick="generateAndDownload('personality-quiz', 375, 812, '#EEF2FF', 'Travel Quiz', 'Discover your travel personality')">Personality Quiz</button>
+        
+        <canvas id="canvas" style="display: none;"></canvas>
+    </div>
+
+    <script>
+        function generateAndDownload(filename, width, height, bgColor, title, subtitle) {
+            const canvas = document.getElementById('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Status bar
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, width, 44);
+            ctx.fillStyle = '#FFF';
+            ctx.font = '16px -apple-system, Arial';
+            ctx.fillText('9:41', 20, 28);
+            ctx.fillText('100%', width - 50, 28);
+            
+            // App content based on type
+            if (filename.includes('screenshot-1')) {
+                // World map mockup
+                ctx.fillStyle = '#F0F9FF';
+                ctx.fillRect(20, 80, width - 40, 400);
+                
+                // Mock countries
+                ctx.fillStyle = '#FF0080';
+                ctx.fillRect(50, 150, 60, 40);
+                ctx.fillStyle = '#0080FF';
+                ctx.fillRect(200, 200, 80, 50);
+                ctx.fillStyle = '#FFD93D';
+                ctx.fillRect(150, 350, 70, 45);
+                
+                // Navigation bar
+                ctx.fillStyle = '#1F2937';
+                ctx.fillRect(0, height - 100, width, 100);
+            }
+            
+            // Main title
+            ctx.fillStyle = '#1F2937';
+            ctx.font = 'bold 32px -apple-system, Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(title, width / 2, height / 2);
+            
+            // Subtitle
+            if (subtitle) {
+                ctx.font = '18px -apple-system, Arial';
+                ctx.fillStyle = '#6B7280';
+                ctx.fillText(subtitle, width / 2, height / 2 + 50);
+            }
+            
+            // Pinned branding
+            ctx.font = 'bold 24px -apple-system, Arial';
+            ctx.fillStyle = '#FF0080';
+            ctx.fillText('📍 Pinned', width / 2, height - 50);
+            
+            // Download the image
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.download = filename + '.png';
+                a.href = url;
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+        }
+    </script>
+</body>
+</html>

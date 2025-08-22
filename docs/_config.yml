@@ -1,0 +1,75 @@
+# GitHub Pages Configuration for Pinned
+title: "Pinned - Track Your Travel Adventures"
+description: "Discover your travel personality and track your adventures with Pinned. The iOS app that turns your journeys into beautiful stories with analytics, photos, and personality-driven insights."
+url: "https://aethon-labs.github.io"
+baseurl: "/pinned"
+author: "Aethon Labs"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# GitHub Pages settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# SEO settings
+lang: en_US
+twitter:
+  username: pinnedapp
+  card: summary_large_image
+
+social:
+  name: Pinned
+  links:
+    - https://twitter.com/pinnedapp
+    - https://instagram.com/pinnedapp
+    - https://github.com/aethon-labs/pinned
+
+# Logo and favicon
+logo: /assets/logo.svg
+favicon: /assets/favicon.ico
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/og-image.png
+
+# Collections
+collections_dir: collections
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .git
+  - .gitignore
+
+# Include files
+include:
+  - _redirects
+
+# Custom variables
+app:
+  name: "Pinned"
+  tagline: "Track Your Travel Adventures"
+  version: "1.0.0"
+  ios_version: "15.0+"
+  app_store_url: "https://apps.apple.com/app/pinned"
+  
+company:
+  name: "Aethon Labs"
+  email: "hello@pinned.app"
+  support_email: "support@pinned.app"
+  privacy_email: "privacy@pinned.app"

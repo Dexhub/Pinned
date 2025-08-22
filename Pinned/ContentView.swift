@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var travelData: TravelData
+    @Binding var deepLink: DeepLink?
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if !travelData.hasCompletedOnboarding {
+            OnboardingView()
+        } else if travelData.shouldShowQuiz() {
+            TravelQuizView()
+        } else {
+            MainTabView(deepLink: $deepLink)
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(deepLink: .constant(nil))
+        .environmentObject(TravelData())
 }
